@@ -1,35 +1,8 @@
 # ftc_app
-FTC Android Studio project to create FTC Robot Controller app.
 
-This is the FTC SDK that can be used to create an FTC Robot Controller app, with custom op modes.
-The FTC Robot Controller app is designed to work in conjunction with the FTC Driver Station app.
-The FTC Driver Station app is available through Google Play.
+latin school of chicago robotics code. ask chris reuter or eddy lee if u have questions
 
-To use this SDK, download/clone the entire project to your local computer.
 
-*** Important note regarding the repository size ***:  this repository is large and it can take a long time and a lot of space to clone the entire repository. If you would like to save time and space, there are some options that you can choose to download only the most current version of the Android project folder.
-
-If you are a git user, you can use the --depth command line argument to only clone the most current version of the repository:
-
-  git clone --depth=1 https://github.com/ftctechnh/ftc_app.git
-
-Or, if you prefer, you can use the "Download Zip" button available through the main repository page.  You can also download the project folder (as a .zip or .tar.gz archive file) from the Downloads subsection of the Releases page for this repository.
-
-Use Android Studio to import the folder  ("Import project (Eclipse ADT, Gradle, etc.)").
-
-The Javadoc reference documentation for the FTC SDK is now available online.  Visit the following URL to view the FTC SDK documentation as a live website:
-
-http://ftctechnh.github.io/ftc_app/doc/javadoc/index.html
-
-Documentation for the FTC SDK is also included with this repository.  There is a subfolder called "doc" which contains several subfolders:
-
- * The folder "apk" contains the .apk files for the FTC Driver Station and FTC Robot Controller apps.
- * The folder "javadoc" contains the JavaDoc user documentation for the FTC SDK.
- * The folder "tutorial" contains PDF files that help teach the basics of using the FTC SDK.
-
-For technical questions regarding the SDK, please visit the FTC Technology forum:
-
-  http://ftcforum.usfirst.org/forumdisplay.php?156-FTC-Technology
 
 **************************************************************************************
 
@@ -85,7 +58,7 @@ Changes include:
     - Blocks execute after while-opModeIsActive loop (to allow for cleanup before exiting op mode).
     - Added gyro integratedZValue block.
     - Fixes bug with projects page for Firefox browser.
-    - Added IsSpeaking block to AndroidTextToSpeech.  
+    - Added IsSpeaking block to AndroidTextToSpeech.
  * Implements support for the REV Robotics Expansion Hub
     - Implements support for integral REV IMU (physically installed on I2C bus 0, uses same Bosch BNO055 9 axis absolute orientation sensor as Adafruit 9DOF abs orientation sensor).
     - Implements support for REV color/range/light sensor.
@@ -94,7 +67,7 @@ Changes include:
     - Includes support for REV Control Hub (note that the REV Control Hub is not yet approved for FTC use).
     - Implements FTC Blocks programming support for REV Expansion Hub and sensor hardware.
     - Detects and alerts when I2C device disconnect.
-    
+
 **************************************************************************************
 
 Version 2.62 (built on 17.01.07)
@@ -115,7 +88,7 @@ Version 2.6 (released on 16.12.16)
      - fix isCalibrating issues.
   * Blocks Programming mode changes:
      - Blocks now ignores a device in the configuration xml if the name is empty. Other devices work in configuration work fine.
-     
+
 **************************************************************************************
 
 Version 2.5 (internal release on released on 16.12.13)
@@ -146,7 +119,7 @@ Version 2.5 (internal release on released on 16.12.13)
      - Added type safety to blocks for LightSensor.
      - Added type safety to blocks for LinearOpMode.
      - Added type safety to blocks for MagneticFlux.
-     - Added type safety to blocks for MatrixF.     
+     - Added type safety to blocks for MatrixF.
      - Added type safety to blocks for MrI2cCompassSensor.
      - Added type safety to blocks for MrI2cRangeSensor.
      - Added type safety to blocks for OpticalDistanceSensor.
@@ -223,7 +196,7 @@ Version 2.30 (released on 16.10.05)
      - Fix for CompassSensor setMode block
   * Vuforia
      - Fix deadlock / make camera data available while Vuforia is running.
-     - Update to Vuforia 6.0.117 (recommended by Vuforia and Google to close security loophole). 
+     - Update to Vuforia 6.0.117 (recommended by Vuforia and Google to close security loophole).
   * Fix for autonomous 30 second timer bug (where timer was in effect, even though it appeared to have timed out).
   * opModeIsActive changes to allow cleanup after op mode is stopped (with enforced 2 second safety timeout).
   * Fix to avoid reading i2c twice.
@@ -281,7 +254,7 @@ Version 2.00 (released on 16.08.19)
  * Standardized units in analog input.
  * Cleaned up code for existing analog sensor classes.
  * setChannelMode and getChannelMode were REMOVED from the DcMotorController class.  This is important - we no longer set the motor modes through the motor controller.
- * setMode and getMode were added to the DcMotor class.  
+ * setMode and getMode were added to the DcMotor class.
  * ContinuousRotationServo class has been added to the FTC SDK.
  * Range.clip() method has been overloaded so it can support this operation for int, short and byte integers.
  * Some changes have been made (new methods added) on how a user can access items from the hardware map.
@@ -351,7 +324,7 @@ Release 16.03.09
  * Added code to create log messages while waiting for LinearOpMode shutdown.
  * Fix so Wifi Direct Config activity will no longer launch multiple times.
  * Added the ability to specify an alternate i2c address in software for the Modern Robotics gyro.
- 
+
 **************************************************************************************
 
 Release 16.02.09
@@ -361,7 +334,7 @@ Release 16.02.09
     - If user attempts to start/restart RC with one or more module missing, it will display a warning but still start up.
     - When running an op mode, if one or more modules gets disconnected, the RC & DS will display warnings,and robot will keep on working in spite of the missing module(s).
     - If a disconnected module gets physically reconnected the RC will auto detect the module and the user will regain control of the recently connected module.
-    - Warning messages are more helpful (identifies the type of module that’s missing plus its USB serial number).   
+    - Warning messages are more helpful (identifies the type of module that’s missing plus its USB serial number).
  * Code changes to fix the null gamepad reference when users try to reference the gamepads in the init() portion of their op mode.
  * NXT light sensor output is now properly scaled.  Note that teams might have to readjust their light threshold values in their op modes.
  * On DS user interface, gamepad icon for a driver will disappear if the matching gamepad is disconnected or if that gamepad gets designated as a different driver.
@@ -435,7 +408,7 @@ Release 15.11.04.001
  * Fix to keep references stable when updating gamepad.
  * For legacy Matrix motor/servo controllers removed necessity of appending "Motor" and "Servo" to controller names.
  * Updated HT color sensor driver to use constants from ModernRoboticsUsbLegacyModule class.
- * Updated MR color sensor driver to use constants from ModernRoboticsUsbDeviceInterfaceModule class. 
+ * Updated MR color sensor driver to use constants from ModernRoboticsUsbDeviceInterfaceModule class.
  * Correctly handle I2C Address change in all color sensors
  * Updated/cleaned up op modes.
   - Updated comments in LinearI2cAddressChange.java example op mode.
@@ -450,7 +423,7 @@ Release 15.11.04.001
 
 T. Eng
 November 5, 2015
- 
+
 **************************************************************************************
 
 Release 15.10.06.002
